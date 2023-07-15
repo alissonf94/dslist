@@ -1,4 +1,4 @@
-package br.com.maisunifacisa.alissonfernandes.dslist.entities.repositories;
+package br.com.maisunifacisa.alissonfernandes.dslist.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

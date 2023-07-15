@@ -14,9 +14,8 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String title;
-	private Integer year;
-	
 	@Column(name = "game_year")
+	private Integer year;
 	private String genre;
 	private String platform;
 	private String imgUrl;
@@ -28,8 +27,7 @@ public class Game {
 	
 	public Game () {}
 	
-	public Game(String title, Integer year, String genre, String platform, String imgUrl, String shortDescription,
-			String longDescription,Double score) {
+	public Game(String title,Double score,Integer year,String genre,String platform,String imgUrl,String shortDescription,String longDescription) {
 		super();
 		this.title = title;
 		this.year = year;

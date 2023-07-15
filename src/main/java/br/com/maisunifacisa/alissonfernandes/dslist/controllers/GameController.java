@@ -1,14 +1,16 @@
-package br.com.maisunifacisa.alissonfernandes.dslist.entities.controllers;
+package br.com.maisunifacisa.alissonfernandes.dslist.controllers;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.maisunifacisa.alissonfernandes.dslist.entities.GameDTO;
 import br.com.maisunifacisa.alissonfernandes.dslist.entities.GameMinDTO;
-import br.com.maisunifacisa.alissonfernandes.dslist.entities.services.GameService;
+import br.com.maisunifacisa.alissonfernandes.dslist.services.GameService;
 
 @RestController
 @RequestMapping(value = "/games")
@@ -21,4 +23,8 @@ public class GameController {
 		return gameService.findAll();
 	}
 	
+	@GetMapping(value = "/{id}")
+	public GameDTO findById (@PathVariable Long id) {
+		return gameService.findnById(id);
+	}
 }

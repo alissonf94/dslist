@@ -1,4 +1,7 @@
-package br.com.maisunifacisa.alissonfernandes.dslist.entities;
+package br.com.maisunifacisa.alissonfernandes.dslist.DTO;
+
+import br.com.maisunifacisa.alissonfernandes.dslist.entities.Game;
+import br.com.maisunifacisa.alissonfernandes.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 	private Long id;
@@ -15,7 +18,13 @@ public class GameMinDTO {
 		this.imgUrl = game.getImgUrl();
 		this.shortDescription = game.getShortDescription();
 	}
-
+	
+	public GameMinDTO (GameMinProjection gameMinProjection) {
+		this.id = gameMinProjection.getId();
+		this.title = gameMinProjection.getTitle();
+		this.imgUrl = gameMinProjection.getImgUrl();
+		this.shortDescription = gameMinProjection.getShortDescription();
+	}
 	public Long getId() {
 		return id;
 	}

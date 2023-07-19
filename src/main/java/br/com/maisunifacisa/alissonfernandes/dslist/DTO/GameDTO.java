@@ -1,6 +1,6 @@
-package br.com.maisunifacisa.alissonfernandes.dslist.entities;
+package br.com.maisunifacisa.alissonfernandes.dslist.DTO;
 
-
+import br.com.maisunifacisa.alissonfernandes.dslist.entities.Game;
 
 public class GameDTO {
 	private Long id;
